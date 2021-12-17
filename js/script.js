@@ -12,26 +12,35 @@ Le validazioni e i controlli possiamo farli anche in un secondo momento.
 Rendetemi fiero :muscolo: */
 function createNewBox(griglia,box,max){
     let newBox=document.createElement('div');
-    newBox.className=box;
+    newBox.className=max;
+    newBox.innerText=number;
     griglia.append(newBox);
-    for(i=0;i<max;i++){
-        newBox.innerHTML=i;
-    }
     newBox.addEventListener('click',function(){
         this.classList.toggle("azure");
     })
 }
-
-let scelta1=document.getElementById("level1");
 let griglia1=document.getElementById("griglia1");
+let scelta1=document.getElementById("level1");
 let scelta2=document.getElementById("level2");
-let griglia2=document.getElementById("griglia2");
 let scelta3=document.getElementById("level3");
-let griglia3=document.getElementById("griglia3");
+
 
 scelta1.addEventListener('click',function(){
-        for(i=0; i < 100; i++){
-        createNewBox(griglia1,'box1',100);
+        griglia1.innerHTML='';
+        for(i=1; i <= 100; i++){
+        createNewBox(griglia1,'box1',i);
     }
+ });
+ scelta2.addEventListener('click',function(){
+    griglia1.innerHTML='';
+    for(i=1; i <= 81; i++){
+    createNewBox(griglia1,'box2',i);
+}
+});
+scelta3.addEventListener('click',function(){
+    griglia1.innerHTML='';
+    for(i=1; i <= 49; i++){
+    createNewBox(griglia1,'box3',i);
+}
 });
 
