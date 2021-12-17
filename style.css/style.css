@@ -1,0 +1,38 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+#griglia1,#griglia2,#griglia3{
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 auto;
+    margin-top: 50px;
+}
+#griglia1{
+    width: 500px;
+}
+#griglia2{
+    width: 405px;
+}
+#griglia3{
+    width: 245px;
+}
+
+.box1,.box2,.box3{
+    height: 50px;
+    background-color: white;
+    border: 1px solid black;
+}
+.box1{
+    width: calc(100% / 10);
+}
+.box2{
+    width: calc(100% / 9);
+}
+.box3{
+    width: calc(100% / 7);
+}
+.azure{
+    background-color: rgb(18, 97, 97);
+}
